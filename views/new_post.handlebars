@@ -1,0 +1,20 @@
+<head>
+    <link rel="stylesheet" href="../public/css/styles.css" />
+</head>
+
+<body>
+    <form id="new-post" class="card p-5" method="post" action="/newPost">
+        <h1>Make A Post</h1>
+        <div>
+            <label for="Post-Title">Title:</label><br />
+            <input class="form" type="text" id="post-Title" name="title"/>
+        </div>
+        <div>
+            <label for="post">Post Body:</label><br />
+            <textarea name="content" id="textpost" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form mt-2">
+            <button class="btn btn-primary" type="submit" id="postBtn">Post</button>
+        </div>
+    </form>
+</body>
