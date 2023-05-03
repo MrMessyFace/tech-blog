@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Tech Blog</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/jass.css" />
+    <script src="https://kit.fontawesome.com/5e86550e56.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to our blog</h1>
+        <nav id="nav">
+            <form action="/" method="GET">
+                <button>Home</button>
+            </form>
+            {{#if loggedIn}}
+            <div class="user-dashboard">
+                <form action="/dashboard" method="GET">
+                    <button type="submit" id="dashboard">Dashboard</button>
+                </form>
+            </div>
+            <form action="/logout" method="POST">
+                <button type="submit" id="logout">Logout</button>
+            </form>
+            {{else}}
+            <form action="/login" method="GET">
+                <button id="">Login</button>
+            </form>
+            {{/if}}
+        </nav>
+    </header>
+
+    <main>
+        <div class="gallery">
+            {{{body}}}
+        </div>
+    </main>
+
+    {{#if loggedIn}}
+    <script src="/js/index.js"></script>
+    {{/if}}
+    <script src="/js/index.js"></script>
+</body>
