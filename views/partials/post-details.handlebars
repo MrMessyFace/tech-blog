@@ -19,7 +19,8 @@
             {{#each postData.comments}}
             <div class="comment-item">
                 <p><strong>{{this.user}}</strong>
-                    <span class="created">{{this.created}}</span></p>
+                    <span class="created">{{this.created}}</span>
+                </p>
                 <p class="text">{{this.text}}</p>
             </div>
             {{/each}}
@@ -29,7 +30,8 @@
             {{/if}}
         </div>
 
-        <form action="/post/{{postId}}/comment" method="POST" class="comment-form" onsubmit="return validateCommentForm()">
+        <form action="/post/{{postId}}/comment" method="POST" class="comment-form"
+            onsubmit="return validateCommentForm()">
             <label for="comment">Leave a comment:</label><br />
             <textarea id="comment" name="comment"></textarea><br />
 
@@ -42,7 +44,7 @@
             <input type="hidden" name="_method" value="PUT" />
             <h1>Update Post</h1>
             <label for="title">Title</label><br />
-            <input type="text" id="title" name="title" value="{{postData.title}}"/><br />
+            <input type="text" id="title" name="title" value="{{postData.title}}" /><br />
 
             <label for="body">Body:</label><br />
             <textarea id="body" name="body">{{postData.body}}</textarea><br />

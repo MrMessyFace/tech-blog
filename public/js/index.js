@@ -37,11 +37,11 @@ const logout = async () => {
 
 async function getPosts() {
     fetch('/')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => console.log(error));
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => console.log(error));
 }
 
 // Attach an event listener to the form's submit button

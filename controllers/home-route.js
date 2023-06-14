@@ -38,7 +38,7 @@ router.get("/", async (req, res) => {
 router.get("/dashboard", async (req, res) => {
   try {
     // Check if the user is logged in
-    if (!req.session.loggedIn ||globalUserId === undefined) {
+    if (!req.session.loggedIn || globalUserId === undefined) {
       return res.redirect("/login");
     }
 
@@ -223,7 +223,7 @@ router.post("/post/:id", async (req, res) => {
     console.log(post);
 
     if (!post) {
-      res.status(404).render("403" , {loggedIn: req.session.loggedIn });
+      res.status(404).render("403", { loggedIn: req.session.loggedIn });
       return;
     }
 
@@ -262,7 +262,7 @@ router.delete("/post/:id", async (req, res) => {
 
     // Check if the user is authorized to delete the post
     if (post.user_id !== userId) {
-      return res.status(403).render("403", {loggedIn: req.session.loggedIn });
+      return res.status(403).render("403", { loggedIn: req.session.loggedIn });
     }
 
     // Delete all comments associated with the post
@@ -319,7 +319,7 @@ router.post("/newPost", async (req, res) => {
       user_id: globalUserId,
     };
 
-    console.log("User",newPost.user_id)
+    console.log("User", newPost.user_id)
 
     // Save the new post to the database
     await Post.create(newPost);
