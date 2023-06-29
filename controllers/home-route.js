@@ -89,7 +89,7 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-  // ! This is making sure that the login button is changed to logout if the user is logged in
+  // This is making sure that the login button is changed to logout if the user is logged in
   res.render("login", { loggedIn: req.session.loggedIn });
 });
 
