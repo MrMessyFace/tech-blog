@@ -1,28 +1,28 @@
 const { Post } = require('../models');
 
-const postdata = [
+const postData = [
     {
-        title: 'Post 1',
-        content: 'Content 1',
-        user_id: 1,
+        title: 'We are the best soda!',
+        body: 'We have 23 flavors!',
+        userId: 1
     },
     {
-        title: 'Post 2',
-        content: 'Content 2',
-        user_id: 2,
+        title: 'Come get some chicken!',
+        body: 'Its finger lickin good!',
+        userId: 2
     },
     {
-        title: 'Post 3',
-        content: 'Content 3',
-        user_id: 3,
+        title: 'Burger King sucks!',
+        body: 'Come to McDonalds instead!',
+        userId: 3
     },
     {
-        title: 'Post 4',
-        content: 'Content 4',
-        user_id: 4,
-    },
+        title: 'Big Mac Sauce is no secret!',
+        body: 'Its just Thousand Island dressing...',
+        userId: 4
+    }
 ];
 
-const seedPosts = () => Post.bulkCreate(postdata);
+const seedPosts = () => Post.bulkCreate(postData);
 
 module.exports = seedPosts;

@@ -2,13 +2,14 @@
   "name": "tech-blog",
   "version": "1.0.0",
   "description": "Week 14 Homework Challenge from Northwestern Coding Bootcamp.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrMessyFace/tech-blog.git"
+  },
   "author": "Jessie Galindo",
   "license": "ISC",
   "bugs": {
