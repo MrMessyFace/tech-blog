@@ -17,6 +17,9 @@
     "url": "https://github.com/MrMessyFace/tech-blog/issues"
   },
   "homepage": "https://github.com/MrMessyFace/tech-blog#readme",
+  "engines": {
+    "node": "18.15.0"
+  },
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
