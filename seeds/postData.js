@@ -1,25 +1,30 @@
-const { Post } = require('../models');
+const { Post } = require("../models");
 
 const postData = [
     {
-        title: 'We are the best soda!',
-        body: 'We have 23 flavors!',
-        userId: 1
+        title: "1st Post",
+        content: "This is the content of the first blog post.",
+        user_id: 1,
     },
     {
-        title: 'Come get some chicken!',
-        body: 'Its finger lickin good!',
-        userId: 2
+        title: "2nd Post",
+        content: "This is the content of the second blog post.",
+        user_id: 2,
     },
     {
-        title: 'Burger King sucks!',
-        body: 'Come to McDonalds instead!',
-        userId: 3
+        title: "3rd Post",
+        content: "This is the content of the third blog post.",
+        user_id: 3,
     },
     {
-        title: 'Big Mac Sauce is no secret!',
-        body: 'Its just Thousand Island dressing...',
-        userId: 4
+        title: "4th Post",
+        content: "This is the content of the fourth blog post.",
+        user_id: 4,
+    },
+    {
+        title: "5th Post",
+        content: "This is the content of the fifth blog post.",
+        user_id: 5,
     }
 ];
 
