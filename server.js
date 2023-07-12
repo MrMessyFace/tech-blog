@@ -15,8 +15,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize,
-  }),
+    db: sequelize
+  })
 };
 
 app.use(session(sess));
@@ -34,7 +34,7 @@ app.use(
     secret: process.env.SECRET,
     store: new SequelizeStore({ db: sequelize }),
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: false
   })
 );
 

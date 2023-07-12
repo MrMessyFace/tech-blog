@@ -7,8 +7,8 @@ const sequelize = process.env.JAWSDB_URL
     host: 'localhost',
     dialect: 'mysql',
     dialectOptions: {
-      decimalNumbers: true,
-    },
+      decimalNumbers: true
+    }
   });
 
 module.exports = sequelize;

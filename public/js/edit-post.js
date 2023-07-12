@@ -14,7 +14,7 @@ const updateTechPostFormHandler = async (event) => {
         const response = await fetch(`/api/posts/${post_id}`, {
             method: "PUT",
             body: JSON.stringify({ title, content }),
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json" }
         });
 
         if (response.ok) {
