@@ -2,7 +2,7 @@ const seedUsers = require("./userData");
 const seedPosts = require("./postData");
 const seedComments = require("./commentData");
 
-const sequelize = require("../config/connection");
+const sequelize = require("../config/config");
 
 const seedAll = async () => {
 
@@ -10,7 +10,7 @@ const seedAll = async () => {
 
   await seedUsers();
   await seedPosts();
-  await seedComments();
+  // await seedComments();
 
   process.exit(0);
 };
