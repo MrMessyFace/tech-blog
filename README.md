@@ -6,7 +6,7 @@ I was tasked with creating a working tech blog site that you can create a user, 
 
 ## Installation
 
-I used Node.js, Express.js, Mysql2, Sequelize, Handlebars, and bcrypt.
+I used Node.js, Express.js, Mysql2, Sequelize, Handlebars, and bcrypt. You can clone the repository to your own device but be sure to change the .env.EXAMPLE to a .env file and insert your MySQL username and password for functionality.
 
 ## Usage
 
