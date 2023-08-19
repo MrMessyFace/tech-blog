@@ -7,30 +7,30 @@ const editFormHandler = async function (event) {
   const body = document.querySelector('textarea[name="post-body"]').value;
 
   await fetch(`/api/post/${postId}`, {
-    method: 'PUT',
+    method: "PUT",
     body: JSON.stringify({
       title,
-      body
+      body,
     }),
     headers: {
-      'Content-Type': 'application/json'
-    }
+      "Content-Type": "application/json",
+    },
   });
 
-  document.location.replace('/dashboard');
+  document.location.replace("/dashboard");
 };
 
 const deleteClickHandler = async function () {
   await fetch(`/api/post/${postId}`, {
-    method: 'DELETE'
+    method: "DELETE",
   });
 
-  document.location.replace('/dashboard');
+  document.location.replace("/dashboard");
 };
 
 document
-  .querySelector('#edit-post-form')
-  .addEventListener('submit', editFormHandler);
+  .querySelector("#edit-post-form")
+  .addEventListener("submit", editFormHandler);
 document
-  .querySelector('#delete-btn')
-  .addEventListener('click', deleteClickHandler);
+  .querySelector("#delete-btn")
+  .addEventListener("click", deleteClickHandler);

@@ -1,9 +1,9 @@
 :root {
-  --primary: black;
-  --secondary: darkgreen;
-  --tertiary: white;
-  --light-dark: lime;
-  --dark: green;
+  --primary: #ccdad1;
+  --secondary: #9caea9;
+  --tertiary: #788585;
+  --light-dark: #6f6866;
+  --dark: #38302e;
   --border-radius: 0.3rem;
 }
 
@@ -19,6 +19,15 @@ body {
   color: var(--dark);
   line-height: 1.5;
   font-size: 16px;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding-bottom: 50px;
 }
 
 h1,
@@ -61,7 +70,7 @@ p {
 input {
   width: 100%;
   border: 1px solid #ccc;
-  background: #FFF;
+  background: #fff;
   margin: 0 0 5px;
   padding: 10px;
 }
@@ -156,16 +165,29 @@ input {
   background-color: var(--dark);
 }
 
-.footer a {
-  display: inline-block;
-  padding: 1em;
-  margin-bottom: .5em;
+.footer {
+  display: flex;
+  justify-content: center;
   background-color: var(--dark);
-  color: var(--primary);
-  border-radius: var(--border-radius);
-  text-decoration: none;
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  width: 100%;
 }
 
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: row;
+  color: var(--primary);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* CARDS */
 .card {
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
@@ -183,6 +205,7 @@ input {
   padding: 1%;
 }
 
+/* FORM */
 .form-label,
 .form-input,
 .form-textarea {
@@ -203,6 +226,7 @@ input {
   border-radius: var(--border-radius);
 }
 
+/* HEIGHT / WIDTH UTILS */
 .min-100-vh {
   min-height: 100vh;
 }
@@ -211,10 +235,12 @@ input {
   min-width: 100vw;
 }
 
+/* FONT UTILS */
 .text-uppercase {
   text-transform: uppercase;
 }
 
+/* FLEX CONTENT */
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -310,6 +336,7 @@ input {
   flex: 0 0 100%;
 }
 
+/* col-sm */
 @media screen and (min-width: 640px) {
   .col-sm-1 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
@@ -360,6 +387,7 @@ input {
   }
 }
 
+/* col-md */
 @media screen and (min-width: 768px) {
   .col-md-1 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
@@ -410,6 +438,7 @@ input {
   }
 }
 
+/* col-lg */
 @media screen and (min-width: 992px) {
   .col-lg-1 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
@@ -460,6 +489,7 @@ input {
   }
 }
 
+/* col-xl */
 @media screen and (min-width: 1200px) {
   .col-xl-1 {
     flex: 0 0 calc(100% * 1 / 12 - 2%);
